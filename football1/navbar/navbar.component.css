@@ -1,0 +1,15 @@
+#signin{
+    color: #fff;
+}
+#signout{
+    color: #fff;
+}
+.btn{
+    background: none ;
+    border: none;
+    color: #fff;
+    margin-top: 15px;
+}
+.navbar{
+    background: rgb(1, 1, 46) !important;
+}

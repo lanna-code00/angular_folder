@@ -1,0 +1,11 @@
+/* .pic{
+ background-image: url('../../assets/img/Tgroup5.png');
+} */
+.card-test{
+   color: black;
+}
+.card-test:hover{
+   color: rgb(0, 0, 71);
+   margin-left: 10px;
+   transition: 0.9s;
+}

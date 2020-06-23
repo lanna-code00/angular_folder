@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 m-3">
+              <div routerLink="/teamone" (click)="backtoteamone()" class="card-header mt-5 text-center shadow" style="cursor:pointer; color:  rgb(1, 1, 46);">
+                CLICK TO MAKE CHANGES TEAM ONE (1)
+              </div>
+
+              <div routerLink="/teamtwo" (click)="backtoteamtwo()" class="card-header mt-5 text-center shadow " style="cursor:pointer; color:  rgb(1, 1, 46);">
+                CLICK TO MAKE CHANGES TEAM TWO (2)
+              </div>
+                    
+              <div class="mt-5 text-center" style=" color: rgb(1, 1, 46)"><b>OR</b></div>
+
+              <div (click)="go_to_default()" class="card-header mt-5 text-center shadow" routerLink="/default" style="cursor:pointer; color:  rgb(1, 1, 46);">
+                CLICK TO SEE DEFAULT SETTING
+              </div>
+        </div>
+    </div>
+</div>

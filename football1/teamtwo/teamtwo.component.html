@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="h2 text-center mt-5">
+        <b>TEAM TWO (2)</b>
+    </div>
+
+    <div class="h6 text-center mt-5">
+        <b>ARRANGE YOUR TEAM HERE !</b>
+    </div>
+ <div class="row">
+
+    <div class="col-md-6 mt-5">
+        <div class="card-header">
+           CLICK TO CHANGE CLUB
+        </div>
+      <input type="text" [(ngModel)]="club2" class="form-control" value="">
+     </div>
+
+   <div class="col-md-6 mt-5">
+      <div class="card-header">
+        CLICK TO CHANGE COACH
+      </div>
+    <input type="text" [(ngModel)]="coach2" class="form-control">
+   </div>
+
+   <div class="col-md-6 mt-5">
+    <div class="card-header">
+      CLICK TO CHANGE PLAYERS
+    </div>
+    <input [(ngModel)]="player11" type="text"  class="form-control">
+    <input [(ngModel)]="player22" type="text"  class="form-control">
+    <input [(ngModel)]="player33" type="text"  class="form-control">
+    <input [(ngModel)]="player44" type="text"  class="form-control">
+    <input [(ngModel)]="player55" type="text"  class="form-control">
+    <input [(ngModel)]="player66" type="text"  class="form-control">
+    <input [(ngModel)]="player77" type="text"  class="form-control">
+    <input [(ngModel)]="player88" type="text"  class="form-control">
+    <input [(ngModel)]="player99" type="text"  class="form-control">
+    <input [(ngModel)]="player1010" type="text"  class="form-control">
+    <input [(ngModel)]="player1111" type="text"  class="form-control">
+
+ </div>
+
+ <div class="col-md-6 mt-5">
+    <div class="card-header">
+        CLICK TO CHANGE CAPTAIN
+    </div>
+    <input type="text" [(ngModel)]="captain2"  class="form-control">
+ </div>
+
+ <div class="col-md-6 mt-5">
+    <div class="card-header">
+        CLICK TO CHANGE ASST. CAPTAIN
+</div>
+<input type="text" [(ngModel)]="asst_captain2" class="form-control">
+ </div>
+
+ <div class="col-md-6 mt-5">
+    <div class="card-header">
+        CLICK TO CHANGE BENCHERS 
+    </div>
+    <input type="text" [(ngModel)]="benchers11" class="form-control">
+    <input type="text" [(ngModel)]="benchers22" class="form-control">
+    <input type="text" [(ngModel)]="bechers33" class="form-control">
+    <input type="text" [(ngModel)]="benchers44" class="form-control">
+
+ </div>
+ 
+ <div class="col-md-6 mt-5">
+    <div class="card-header">
+        CLICK TO CHANGE  GOALKEEPER
+    </div>
+    <input type="text" [(ngModel)]="keeper2" class="form-control">
+ </div>
+
+ <div class="col-md-6 mt-5">
+    <div class="card-header text-center text-white" [routerLink]="['/bothteams']" style="background-color: rgb(5, 4, 88) !important;">
+        
+    </div>
+ </div>
+
+ <!-- <div class="col-md-6 mt-5">
+    <div class="card-header text-center text-white" (click)="back_to_home_two()" style="background-color: rgb(90, 10, 10) !important;">
+        BACK TO HOME
+    </div>
+ </div> -->
+ </div>
+
+</div>

@@ -1,0 +1,42 @@
+<div class="container">
+    <mat-horizontal-stepper>
+        <mat-step label="Step 1" state="forum">
+          <p *ngFor="let ans of answers">
+             <span (click)="service.selectQuestion(question)">{{ans.question}}</span>
+            
+          </p>
+          <!-- <p> -->
+            <!--<mat-radio-group>-->
+              <!--*ngFor="let opt of options" [value]="opt"-->
+            <!--<mat-radio-button class="example-radio-button">-->
+                <!--{{opt.optionA}}-->
+            <!--</mat-radio-button>-->
+          <!--</mat-radio-group>-->
+          <!-- </p> -->
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </mat-step>
+        <mat-step label="Step 2" state="forum">
+          <p>Socialize with each other.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </mat-step>
+        <mat-step label="Step 3">
+          <p>You're welcome.</p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+          </div>
+        </mat-step>
+      
+        <!-- Icon overrides. -->
+        <ng-template matStepperIcon="forum">
+          <mat-icon>forum</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="forum">
+          <mat-icon>forum</mat-icon>
+        </ng-template>
+      </mat-horizontal-stepper>
+</div>

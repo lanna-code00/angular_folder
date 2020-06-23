@@ -1,0 +1,261 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="h2 text-center mt-5">
+        <b>DEFAULT</b>
+    </div>
+
+    <div class="h6 text-center mt-5">
+        <b>ARRANGED TEAM (no changes can be here)....Already made template</b>
+    </div>
+ <div class="row">
+    
+    <div class="col-md-6 mt-5" >
+        <div class="card-header h5">
+           CLUB
+        </div>
+      <input type="text" [(ngModel)]="defclub" readonly class="form-control h4" value="">
+     </div>
+
+     <div class="col-md-6 mt-5" >
+      <div class="card-header h5">
+         POSITION
+      </div>
+      <select name="" id="" class="form-control form-control-sm">
+        <option value="4-4-3">4-4-3</option>
+      </select>
+    <!-- <input type="text" readonly class="form-control h4" value=""> -->
+   </div>
+
+   <div class="col-md-6 mt-5 h5">
+      <div class="card-header">
+         COACH
+      </div>
+     
+      <!-- <p class="mt-3">{{defaultRout.name}}</p> -->
+     <div class="input-group mb-3">
+      <input type="text" class="form-control h4" [(ngModel)]="defcoach" readonly value="">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" (click)="viewcoach()" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+        
+      </div>
+    </div>
+   </div>
+
+<!-- 
+   <div class="col-md-6 mt-5 h5">
+      <div class="card-header">
+         COACH
+      </div>
+    <input type="text" readonly class="form-control" value="MAURICIO POCHETTINO">
+    <button><span class="fa fa-contact"></span></button>
+   </div> -->
+
+   <div class="col-md-6 mt-5">
+    <div class="card-header h5">
+       PLAYERS
+    </div>  
+     <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defplayer1" readonly value="">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defplayer2" readonly value="">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defplayer3" readonly value="">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defplayer4" readonly value="">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defplayer5" readonly value="">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" readonly [(ngModel)]="defplayer6" value="">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defplayer7" readonly value="">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" readonly [(ngModel)]="defplayer8" value="">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defplayer9" readonly value="MANUEL PETER">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defplayer10" readonly value="ANDRES INIESTA">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defplayer11" readonly value="DIEGO RIVERA">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+    
+     <div class="input-group mt-3">
+        <input type="button" (click)="viewallplayer()" class="form-control h5 bg-success text-white" value="VIEW PLAYERS" style="cursor:moz-grab;">
+     </div>
+
+ </div>
+
+ <div class="col-md-6 mt-5">
+    <div class="card-header h5">
+         CAPTAIN
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defcaptain" readonly value="LAUTARO MARTINEZ">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+ </div>
+
+ <div class="col-md-6 mt-5">
+    <div class="card-header h5">
+       ASST. CAPTAIN
+</div>
+<div class="input-group">
+   <input type="text" class="form-control h4" [(ngModel)]="defasstcaptain" readonly value="CIRO IMMOBILE">
+   <div class="input-group-append">
+     <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+     <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+   </div>
+ </div>
+ </div>
+
+ <div class="col-md-6 mt-5">
+    <div class="card-header h5">
+     BENCHERS 
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defbencher1" readonly value="CLEMENT LENGLET">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+      <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defbencher2" readonly value="TOBY ALDERWEIRELD">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defbencher3" readonly value="IVAN RAKITIC">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+
+      <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defbencher4" readonly value="DANI PAREJO">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+</div>
+ 
+ <div class="col-md-6 mt-5">
+    <div class="card-header h5">
+        GOALKEEPER
+    </div>
+    <div class="input-group">
+      <input type="text" class="form-control h4" [(ngModel)]="defkeeper" readonly value="BRAD FRIEDEL">
+      <div class="input-group-append">
+        <span class="input-group-text bg-info" id="basic-addon2"><span class="fa fa-eye"></span></span>
+        <span class="input-group-text bg-danger" id="basic-addon2"><span class="fa fa-trash text-white"></span></span>
+
+      </div>
+    </div>
+ </div>
+
+ <div class="col-md-6 mt-5">
+    <div (click)="home()" class="card-header text-center text-white" style="background-color: rgb(5, 4, 88) !important;">
+        OK
+    </div>
+ </div>
+
+ <!-- <div class="col-md-6 mt-5">
+    <div class="card-header text-center text-white" (click)="back_to_home_two()" style="background-color: rgb(90, 10, 10) !important;">
+        BACK TO HOME
+    </div>
+ </div> -->
+ </div>
+
+</div>
+

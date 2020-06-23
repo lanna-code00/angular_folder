@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-lg col-md-6 rounded">
+               <div class="card-header">
+                 <h2 class="text-center"><b>ADD STUDENT</b></h2>
+               </div>
+               <div class="input-group mt-5 p-5">
+                   <label for="" class="col-md-12"><h5><b>FIRST-NAME</b></h5></label><br>
+                    <input type="text" name="fname" class="form-control" [(ngModel)] = "fname" placeholder="firstname">
+               </div>
+ 
+               <div class="input-group  p-5">
+                 <label for="" class="col-md-12"><h5><b>LAST-NAME</b></h5></label><br>
+                  <input type="text" name="lname" [(ngModel)]="lname" placeholder="lastname" class="form-control">
+             </div>
+ 
+             <div class="input-group  p-5">
+                 <label for="" class="col-md-12"><h5><b>E-MAIL ADDRESS</b></h5></label><br>
+                  <input type="text" name="email" placeholder="E-mail" [(ngModel)] = "email" class="form-control">
+             </div>
+ 
+             <div class="input-group  p-5">
+                 <label for="" class="col-md-12"><h5><b>PHONE NO</b></h5></label><br>
+                  <input type="text" name="phone" [(ngModel)] = "phone" placeholder="phone No" class="form-control">
+             </div>
+
+             <button class="btn btn-success" (click) = "submite()">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+ </div>

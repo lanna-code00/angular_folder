@@ -1,0 +1,129 @@
+ <div class="container">
+    <mat-card class="mt-5 text-center h4">ADD QUESTIONS</mat-card>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+
+      <th>ACTIONS</th>
+      <th>QUESTION ID</th>
+       <th>PAPER TYPE</th>
+      <th>QUESTION</th>
+      <th>OPTION A</th>
+      <th>OPTION B</th>
+      <th>OPTION C</th>
+      <th>OPTION D</th>
+      <th>CORRECT ANS</th>
+      <th>MARK</th>
+    </tr>
+  </thead>
+  
+  <tbody class="table-bordered table-editable">
+    <tr *ngFor="let quest of questArr let i = index">
+
+        <td class="h6 text-center"><button class="btn btn-light btn-sm"><span class="fa fa-trash"></span></button>
+          <button type="button" class="btn btn-light">
+              <span class="fa fa-edit"></span>
+          </button></td>
+        <td class="h6 text-center">{{i + 1}}</td>
+        <!-- <td class="h6 text-center">{{quest.course}}</td> -->
+        <td class="h6 text-center">{{quest.course}}</td>
+
+        <td class="h6 text-center">{{quest.question}}</td>
+        <td class="h6 text-center">{{quest.optionA}}</td>
+        <td class="h6 text-center">{{quest.optionB}}</td>
+        <td class="h6 text-center">{{quest.optionC}}</td>
+        <td class="h6 text-center">{{quest.optionD}}</td>
+        <td class="h6 text-center">{{quest.correctans}}</td>
+        <td class="h6 text-center">{{quest.marks}}</td>
+
+    </tr>
+</tbody>
+</table>
+<button type="button" class="btn btn-primary float-right">
+  ADD
+ </button>
+</div>
+<!-- Modal -->
+<div class="container">
+<div class="mx-auto">
+<div class="card card-sm">
+   <div class="card-header"><h2 class="text-center">ADD QUESTIONS</h2></div>
+     <div class="card-body">
+       <form [formGroup]="myquest" (submit)="submitquest()">
+
+
+<div class="col-md-12 float-right">    
+<mat-form-field>
+  <mat-label>Choose Paper type</mat-label>
+  <mat-select  formControlName="papertype" class="mb-2 col-md-12 float-right form-control" name="papertype">
+    <mat-option>--</mat-option>
+    <mat-option *ngFor="let qq of setquests" [value]="qq.id">
+      {{qq.course}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+
+<!-- <div class="col-md-12 float-right">
+   Select paper type: <select>
+     <option >{{qq.course}}</option>
+   </select>
+  </div> -->
+  
+      <div class="col-md-12 float-right">
+          Question: <input type="text" class="form-control mb-2" name="question" formControlName="question">
+      </div>
+
+      <div class="col-md-12 float-right">
+        optionA: <input type="text" class="form-control mb-2" name="optionA" formControlName="optionA">
+    </div>
+
+
+    <div class="col-md-12 float-right">
+      optionB: <input type="text" class="form-control mb-2" name="optionB" formControlName="optionB">
+  </div>
+
+  <div class="col-md-12 float-right">
+    optionC: <input type="text" class="form-control mb-2" name="optionC" formControlName="optionC">
+</div>
+
+<div class="col-md-12 float-right">
+  optionD: <input type="text" class="form-control mb-2" name="optionD" formControlName="optionD">
+</div>
+
+<!-- <div class="col-md-12 float-right">    
+  <mat-form-field>
+    <mat-label>Correct Answer</mat-label>
+    <mat-select  formControlName="correctans" class="mb-2 col-md-12 float-right form-control" name="correctans">
+      <mat-option>--</mat-option>
+      <mat-option [value]="optionA">optionA</mat-option>
+      <mat-option [value]="optionB">optionB</mat-option>  
+      <mat-option [value]="optionC">optionC</mat-option>
+      <mat-option [value]="optionD">optionD</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </div> -->
+
+  <div class="col-md-12 float-right">
+   <p>CorrectAns</p>
+    <select name="correctans" formControlName="correctans" class="form-control col-md-12 float-right">
+      <option value="optionA">optionA</option>
+      <option value="optionB">optionB</option>
+      <option value="optionC">optionC</option>
+      <option value="optionD">optionD</option>
+
+    </select>
+  </div>
+        
+<div class="col-md-12 float-right">
+  marks: <input type="text" class="form-control mb-2" name="marks" formControlName="marks">
+</div>
+
+          <div class="mb-3">
+            <button class="btn btn-success float-right" type="submit">ADD</button>
+          </div>
+      </form>
+     </div>
+</div>
+</div>
+</div>

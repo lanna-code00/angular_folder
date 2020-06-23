@@ -1,0 +1,63 @@
+<!-- <div class="todo-input-wrapper">
+  <input type="text" [(ngModel)]="todoText" value={{todoText}}/>
+  <button class="btn btn-primary" (click)="addTodo()">Submit</button>
+</div> -->
+
+<div class="container-fluid">
+  <div class="row bg-danger" style="height: 150px;">
+
+  </div>
+  <div class="row">
+      <div class="col-10 mx-auto shadow bg-white" style="height: 100%; margin-top: -90px; z-index: 1000">
+              <h3 align="center" class="mt-3" style="border-bottom: 1px solid lightgrey">SIMPLE TODO LIST</h3>
+              <div class="row todo-container p-2" style="max-height: 70vh; overflow-y: auto">
+                  <div class="card-body col-12 shadow animated fadeInUp" *ngFor="let todo of todoArr let i = index">
+                    <mat-checkbox></mat-checkbox>
+                     {{todo.todo}}
+                  <button (click)="delete(i)" class="float-right btn btn-danger"><span class="fa fa-trash" ></span></button>
+                  <!-- <button (click)="edit(i)" class="float-right btn btn-danger" data-toggle="modal" data-target="#myModal"><span class="fa fa-edit" ></span></button> -->
+                  <button class="btn btn-primary float-right" (click)="edit(i)" data-toggle="modal" data-target="#modalConfirmDelete"><span class="fa fa-edit"></span></button>
+              </div>
+              </div>
+              <div class="row" style="position: fixed; bottom: 10px; right: 10px; left: 10px">
+                  <div class="col-8">
+                      <input class="form-control" placeholder="Input todo" [(ngModel)]="todo">
+                  </div>
+                  <div class="col-4">
+                      <button class="btn btn-danger btn-block" (click)="addTodo()">Add</button>
+                  </div>
+              </div>
+      </div>
+
+  </div>
+</div>
+<div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+  <!--Content-->
+  <div class="modal-content text-center">
+    <!--Header-->
+    <div class="modal-header d-flex justify-content-center">
+      <p class="heading">Are you sure?</p>
+    </div>
+
+    <!--Body-->
+    <div class="modal-body">
+
+      <div class="md-form mb-5">
+        <i class="">EDIT TODO</i>
+        <input type="text" class="form-control" [(ngModel)]="todo">
+      </div>
+
+    </div>
+
+    <!--Footer-->
+    <div class="modal-footer flex-center">
+      <a type="button" class="btn btn-danger" (click)="editModal()"  data-dismiss="modal">EDIT</a>
+    </div>
+  </div>
+  <!--/.Content-->
+</div>
+</div>
+
+

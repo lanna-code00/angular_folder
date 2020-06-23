@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row mt-5">
+       <table class="table">
+           <tr *ngFor="let studentC of studentscourse">
+               <td>
+                   <div class="card">
+                      <div class="card-header">
+                          <h4 class="text-center">{{studentC.course}}</h4>
+                          <h4 class="text-center">Questions: {{studentC.questNo}}</h4>
+                         
+                      </div>
+                      <div class="card-body" align="center">
+                       <button class="btn btn-success" (click)="viewProfile(studentC.id)">Click to Start</button>
+                      </div>
+                   </div>
+               </td>
+           </tr>
+       </table>
+    </div>
+</div>

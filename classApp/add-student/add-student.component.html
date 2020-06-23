@@ -1,0 +1,17 @@
+<table border="1" width="100%">
+    <th>NAMES</th>
+    <th>ACTION</th>
+
+    <tr *ngFor = "let student of students">
+        <td>{{student.firstname}}</td>
+        <td><button (click)="viewProfile(student.id)">VIEW</button>
+            <button (click)="delStudent(student.id)">DEL</button>
+        </td>
+        
+    </tr>
+
+
+    
+    <!-- <tr *ngIf = "1 == 1"> Display true
+    </tr> -->
+</table>

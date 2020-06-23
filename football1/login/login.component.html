@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+          <div>
+            <div class="rounded shadow-lg card mt-5">
+                <div class="card-header" style="background-color: rgb(1, 1, 46) !important">
+                    <h3 class="h3 text-center text-white">login form</h3>
+                </div>
+                       
+                <div class="m-3">
+
+                <div class="input-group mt-5 mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Username</span>
+                    </div>
+                    <input type="text" class="form-control" name="username" [(ngModel)]="username">
+                  </div>
+
+                <div class="input-group mt-5 mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">E-mail</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="email" name="email">
+                  </div>
+
+                  <div class="input-group mt-5 mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Password</span>
+                    </div>
+                    <input type="password" class="form-control" [(ngModel)]="password" name="password">
+                  </div>
+
+                  <div class="input-group mt-5 mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Confirm Password</span>
+                    </div>
+                    <input type="password" class="form-control" [(ngModel)]="confirm" name="confirm">
+                  </div>
+                
+                  <button class="btn btn-secondary mt-4 col-md-12 mb-3" id="login" (click)="submite()" routerLink="/home">Create Account</button>
+
+                    <div style="font-size: 15px;">Already have an account ? 
+                      <p style="margin-top: -22px; margin-left: 175px; font-size: 15px; color: blue;"><u>Click here to login</u></p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>

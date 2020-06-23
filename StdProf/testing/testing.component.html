@@ -1,0 +1,37 @@
+<div class="container">
+   <div class="row">
+    <div class="col-md-12">
+       <div class="card">
+           <form class="form-group"  [formGroup]="regData" novalidate (ngSubmit)="submit()">
+          <!-- {{ 2000 | converter}} -->
+          {{ 'Maryann' | params}}
+              <div class="form-control">
+                 <label for="">EMAIL :</label>
+                 <input type="text" formControlName="email" class="col-md-6 form-control" id="" placeholder="username">
+                  <span *ngIf="myemail.dirty && myemail.invalid" class="text-danger">Enter valid username</span>
+                </div>
+
+              <div class="form-control">
+                <label for="">USERANE :</label>
+                <input type="text"  class="col-md-6 form-control" formControlName="username" placeholder="username">
+                <span *ngIf="myusername.touched && myusername.invalid" class="text-danger">username is required</span>
+             
+            </div>
+
+             <div class="form-control">
+                <label for="">PHONE :</label>
+                <input type="text"  class="col-md-6 form-control" formControlName="phone" placeholder="phone">
+                <span *ngIf="myphone.touched && myphone.invalid" class="text-danger">phone No is required</span>
+             
+            </div>
+             <button type="submit" [disabled]="regData.invalid || submitted" name="" id="" class="btn btn-success">
+                <span class="fa fa-spinner fa-spin" *ngIf="submitted"></span> SUBIT</button><br>
+
+
+           <span *ngIf="thanks">THANK U</span>
+            
+            </form>
+       </div>
+    </div>
+   </div>
+</div>

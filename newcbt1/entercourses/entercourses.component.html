@@ -1,0 +1,61 @@
+<div class="container">
+
+  <button class="btn btn-primary col-md-12 mb-5 mt-5 mx-auto" (click)="showModal()">CLICK TO ADD COURSE</button> 
+
+  <form [formGroup]="angForm" (ngSubmit)="postdata()">
+    <div id="firstmodal" *ngIf="sumitted">
+      
+      <div class="card col-md-6 mx-auto">
+        <h4 class="card-header text-center">ADD COURSE</h4>
+        <div class="card-body">
+          <label for="">QESTIONS</label>
+        <input type="text" class="form-control mb-4" placeholder="Maths" name="course" formControlName="course">
+        <label for="">NO OF QUEST</label>
+        <input type="text" class="form-control mb-5" placeholder="20" name="questNo" formControlName="questNo">
+        <button class="btn btn-primary float-right col-md-6 mb-4" (click)="hideModal()" type="submit" style="cursor: pointer;"><span class="fa fa-plus"></span> ADD</button>
+        <button class="btn btn-danger float-right col-md-6 mb-4" (click)="hidesModal()" type="submit" style="cursor: pointer;"><span class="fa fa-times"></span> CANCEL</button>
+            </div> 
+      </div>
+
+      </div>
+  </form>
+  
+<!-- 
+ <div class="card" *ngIf="sumitted">
+  <div class="card-body">
+   <div class="input-group">
+      <input type="text" class="form-control">
+   </div>
+  </div>
+  <button class="btn btn-danger" (click)="okbtn()">Ok</button>
+</div> -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">COURSES</th>
+            <th scope="col">Quest No</th>
+            <th scope="col">ACTION</th>
+          </tr>
+
+          <tr *ngFor = "let coursey of coursess let i = index">
+            <td>{{i + 1}}</td>
+            <td [routerLink]="['/adminsidebar/setquest']">{{coursey.course | uppercase}}</td> 
+            <td>{{coursey.questNo}}</td>
+            <td>
+                <button class="btn btn-danger mr-3"><span class="fa fa-trash"></span></button>
+                <button class="btn btn-primary"><span class="fa fa-edit"></span></button>
+
+          </td>
+            
+        </tr>
+        </thead>     
+    </table>
+ <!-- <app-options></app-options> -->
+</div>
+
+
+
+
+<!-- <router-outlet></router-outlet> -->
+

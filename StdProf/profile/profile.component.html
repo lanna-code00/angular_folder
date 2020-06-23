@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-12" *ngIf="currentStudents">
+          <div class="card">
+             <div class="card-header">STUDENT'S PROFILE</div>
+             <div>
+                  <label for="" class="col-md-12">FIRST-NAME</label>
+                  <h6 class="h3 col-md-12"><b>{{currentStudents.first_name}}</b></h6>
+             </div>
+
+             <div>
+              <label for="" class="col-md-12">LASTNAME</label>
+              <h6 class="h3 col-md-12"><b>{{currentStudents.last_name}}</b></h6>
+         </div>
+
+         <div>
+          <label for="" class="col-md-12">PHONE NO</label>
+          <h6 class="h3 col-md-12"><b>{{currentStudents.phone_no}}</b></h6>
+     </div>
+
+     <div>
+      <label for="" class="col-md-12">E-MAIL</label>
+      <h6 class="h3 col-md-12"><b>{{currentStudents.e_mail}}</b></h6>
+  
+    </div>
+
+          </div>
+      </div>
+  </div>
+</div>

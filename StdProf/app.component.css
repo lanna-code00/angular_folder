@@ -1,0 +1,22 @@
+.nav-div button{
+  margin: 20px;
+  width: 180px;
+  height: 70px;
+  font-size: 20px;
+  background: rgb(109, 3, 3);
+  border: none;
+}
+.nav-div .nav-btn{
+    color: #fff;
+}
+.nav-div button:hover{
+  background: none;
+  border: 2px solid black;
+  color: #000;
+  transition: 0.5s;
+}
+.active-link{
+  width: 180px;
+  height: 70px;
+  background-color: blue;
+}

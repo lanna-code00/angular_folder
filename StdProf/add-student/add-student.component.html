@@ -1,0 +1,33 @@
+<div class="container">
+   <div class="row">
+       <div class="col-md-12">
+           <div class="card shadow-lg col-md-6 rounded">
+              <div class="card-header">
+                <h2 class="text-center"><b>ADD STUDENT</b></h2>
+              </div>
+              <form action="" [formGroup]="studentForm" (submit) = "submitStudentProfile()">
+              <div class="input-group mt-5 p-5">
+                  <label for="" class="col-md-12"><h5><b>FIRST-NAME</b></h5></label><br>
+                   <input type="text" formControlName="fname"  placeholder="Firstname" class="form-control">
+              </div>
+
+              <div class="input-group  p-5">
+                <label for="" class="col-md-12"><h5><b>LAST-NAME</b></h5></label><br>
+                 <input type="text" formControlName="lname" placeholder="Lastname" class="form-control">
+            </div>
+
+            <div class="input-group  p-5">
+                <label for="" class="col-md-12"><h5><b>E-MAIL ADDRESS</b></h5></label><br>
+                 <input type="text"  formControlName="email" placeholder="E-mail"  class="form-control">
+            </div>
+
+            <div class="input-group  p-5">
+                <label for="" class="col-md-12"><h5><b>PHONE NO</b></h5></label><br>
+                 <input type="text" placeholder="Phone No"  formControlName="phone" class="form-control">
+            </div>
+            <button class="btn btn-success" type="submit">SUBMIT</button>
+        </form>
+           </div>
+       </div>
+   </div>
+</div>

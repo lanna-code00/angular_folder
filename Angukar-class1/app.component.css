@@ -1,0 +1,15 @@
+.routeBtn{
+    width: 120px;
+    font-weight: bolder;
+    padding: 7px 0;
+    background: none;
+    border: 1px solid #fff;
+    color: white !important;
+    /* padding: 20px; */
+}
+
+.activeRoute{
+    background: white;
+    border: none;
+    color: red !important;
+}
